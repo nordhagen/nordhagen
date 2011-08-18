@@ -10,6 +10,22 @@ package com.oynor.utils {
 			return;
 		}
 
+		public static function exactLength ( txt:String, length:uint = 10 ):String {
+			length;
+//			var l:uint = text.length;
+//			if (l > length) {
+//				text = text.substr( 0, length - 3 ) + "...";
+//			}
+//			else if (l < length) {
+//				var diff:uint = length - l;
+//				while (diff > 0) {
+//					text += " ";
+//					diff--;
+//				}
+//			}
+			return txt;
+		}
+
 		public static function removeXmlIndents ( $string:String, $removeTabs:Boolean = true, $removeReturns:Boolean = true, $removeExtraSpaces:Boolean = true ):String {
 			var ret:String = $string;
 

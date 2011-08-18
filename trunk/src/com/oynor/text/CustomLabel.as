@@ -20,7 +20,7 @@ package com.oynor.text {
 		private var _fmt:TextFormat;
 		private var _kerning:int;
 
-		public function CustomLabel ( fontName:String = "_sans", size:uint = 12, color:uint = 0, align:String = TextFormatAlign.LEFT, leading:int = 0, kerning:int = 0 ) {
+		public function CustomLabel ( fontName:String = "_sans", size:uint = 12, color:uint = 0, align:String = "left", leading:int = 0, kerning:int = 0 ) {
 			_kerning = kerning;
 			_leading = leading;
 			_align = align;
