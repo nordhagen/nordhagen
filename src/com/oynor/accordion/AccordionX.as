@@ -10,11 +10,6 @@ package com.oynor.accordion {
 	import flash.geom.Rectangle;
 	import flash.utils.Timer;
 
-	/**
-	 * @author Tomek
-	 * 
-	 * new: use of MouseMove and TweenLite
-	 */
 	public class AccordionX  extends Sprite {
 		public var _easing:Number = 0.4;
 		private var _itemWidthOpen:int = 230;
@@ -95,6 +90,7 @@ package com.oynor.accordion {
 		}
 
 		public function start ():void {
+			if (_enabled) return;
 			if (!stage) {
 				_startOnAdded = true;
 			}
@@ -106,6 +102,7 @@ package com.oynor.accordion {
 		}
 
 		public function stop ():void {
+			if (!_enabled) return;
 			_enabled = false;
 			_startOnAdded = false;
 			removeEventListener( MouseEvent.MOUSE_MOVE, _onMouseMove );
